@@ -59,12 +59,6 @@ const initFun = (THREE: typeof import("three")) => {
   }
   render()
 
-  // 设置物体 -- 球体
-  const geometry = new THREE.PlaneGeometry(100, 100);
-  const material = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide });
-  const plane = new THREE.Mesh(geometry, material);
-  scene.add(plane);
-
   // 实例化控制器
   const controls = new OrbitControls(camera, renderer.domElement)
   // 设置阻尼
@@ -74,7 +68,8 @@ const initFun = (THREE: typeof import("three")) => {
 
   return {
     renderer,
-    render
+    render,
+    scene
   }
 
 }
