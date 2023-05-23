@@ -17,6 +17,8 @@ const waterFun = (THREE: typeof import("three"), scene: Scene) => {
     // 水面波纹大小
     scale: 1,
   })
+  // 水面需要盖住石头，所以往上抬高3m
+  water.position.y = 3
 
   // 水面旋转至水平
   water.rotation.x = - Math.PI / 2

@@ -12,22 +12,22 @@ const skyFun = (THREE: typeof import("three"), scene: Scene) => {
   scene.add(sphere);
 
   // 创建视频的纹理
-  const video = document.createElement("video");
-  video.src = '/src/assets/textures/sky.mp4'
-  video.loop = true;
+  // const video = document.createElement("video");
+  // video.src = '/src/assets/textures/sky.mp4'
+  // video.loop = true;
 
   // 目前浏览器禁止自动播放，所以设置一些小交互让视频自动播放，比如鼠标点击事件
-  window.addEventListener("click", () => {
-    // 判断视频是否处于播放状态
-    if (video.paused) {
-      // 当鼠标移动的时候播放视频
-      video.play()
-      // 天空材质
-      skyMaterial.map = new THREE.VideoTexture(video)
-      // 自动更新
-      skyMaterial.map.needsUpdate = true
-    }
-  })
+  // window.addEventListener("click", () => {
+  //   // 判断视频是否处于播放状态
+  //   if (video.paused) {
+  //     // 当鼠标移动的时候播放视频
+  //     video.play()
+  //     // 天空材质
+  //     skyMaterial.map = new THREE.VideoTexture(video)
+  //     // 自动更新
+  //     skyMaterial.map.needsUpdate = true
+  //   }
+  // })
 }
 
 export default skyFun

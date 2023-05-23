@@ -24,7 +24,9 @@ const initFun = (THREE: typeof import("three")) => {
   // 初始化渲染器
   const renderer = new THREE.WebGLRenderer({
     // 设置更理想的状态，需要抗锯齿
-    antialias: true
+    antialias: true,
+    // 设置对数缓冲区
+    logarithmicDepthBuffer: true
   })
   // 设置编码
   /**
